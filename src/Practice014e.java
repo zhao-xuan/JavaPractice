@@ -1,32 +1,27 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class Practice014e {
     public static void main(String[] args) {
-        for (long i = 0; i < Integer.parseInt(args[0]); i++) {
-            int n = Integer.parseInt(args[0]);
-            List<Integer> numList = new ArrayList<>();
-            Random generator = new Random();
-            int x = generator.nextInt(n - 1);
-            while (!isFulfilled(numList, n)) {
-                numList.add(x);
-            }
-
-            System.out.println("hello");
+        int n = Integer.parseInt(args[0]);
+        List<Integer> numList = new ArrayList<>();
+        Set<Integer> numSet = new HashSet<>();
+        Random generator = new Random();
+        int x;
+        while (numSet.size() < n) {
+            x = generator.nextInt(n);
+            numList.add(x);
+            numSet.add(x);
         }
-    }
 
-    public static Boolean isFulfilled(List<Integer> list, int n) {
-        List<Integer> temp = new ArrayList<>();
-        for (int i = 0; i < n; i++)
-            temp.add(i);
-
-        for (Integer integer : temp)
-            if (!list.contains(integer))
-                return false;
-
-        return true;
+        for (Integer integer : numList) {
+            System.out.print(integer + " ");
+        }
+        System.out.println();
+        System.out.print("I had to generate " + numList.size() + " random numbers between 0 and " + n
+                + " to have produced all such numbers at least once.");
     }
 }
