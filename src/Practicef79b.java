@@ -1,5 +1,3 @@
-package JavaPractice.src;
-
 public class Practicef79b {
     public static void main(String[] args) {
         for (long i = 0; i < Integer.parseInt(args[0]); i++) {

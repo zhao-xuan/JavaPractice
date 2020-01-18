@@ -1,5 +1,3 @@
-package JavaPractice.src;
-
 public class Practice98e3 {
     public static void main(String[] args) {
         int temp = Integer.parseInt(args[0]);
