@@ -6,6 +6,19 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Practice845d",
+            "request": "launch",
+            "mainClass": "Practice845d",
+            "projectName": "JavaPractice_9333e7c6"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Practice8f65",
+            "request": "launch",
+            "mainClass": "Practice8f65"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Practicedd4c",
             "request": "launch",
             "mainClass": "Practicedd4c",
